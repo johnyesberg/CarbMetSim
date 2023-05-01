@@ -116,3 +116,10 @@ The "outputfile" is the file where the simulation output will be stored. The sim
 Folder "conf_files_and_scripts":
 ----------------------------------
 A few examples of different configuration files described above as well as a few python scripts to run the simulations using different seeds can be seen in the folder "conf_files_and_scripts".
+
+Reference
+---------
+CarbMetSim: A discrete-event simulator for carbohydrate metabolism in humans. 
+PLoS One. 2020; 15(3): e0209725.
+Published online 2020 Mar 10. doi: 10.1371/journal.pone.0209725
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7064176/

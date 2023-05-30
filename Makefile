@@ -7,7 +7,7 @@
 #
 # for C define  CC = gcc
 CC = g++
-CFLAGS  = -std=c++11 -Wall
+CFLAGS  = -std=c++11 -Wall -g
 
 #SRCS = priq.C SimCtl.cpp HumanBody.cpp Stomach.cpp Intestine.cpp PortalVein.cpp Liver.cpp Kidneys.cpp Muscles.cpp AdiposeTissue.cpp Blood.cpp Brain.cpp Heart.cpp
 

@@ -12,7 +12,7 @@ def read_seeds():
 def execute_sims_normal():
     seeds = read_seeds()
     for seed in seeds:
-        output_file = 'outNormal.' + seed
+        output_file = f'out/outNormal.{seed}.out'
         if os.path.isfile(output_file):
             os.remove(output_file)
         subprocess.call(["../../carbmetsim", "Food.txt", "Exercise.txt", "ParamsNormal.txt", "Events.txt", seed, output_file])
@@ -20,7 +20,7 @@ def execute_sims_normal():
 def execute_sims_diab():
     seeds = read_seeds()
     for seed in seeds:
-        output_file = 'outDiab.' + seed
+        output_file = f'out/outDiab.{seed}.out'
         if os.path.isfile(output_file):
             os.remove(output_file)
         subprocess.call(["../../carbmetsim", "Food.txt", "Exercise.txt", "ParamsDiab.txt", "Events.txt", seed, output_file])

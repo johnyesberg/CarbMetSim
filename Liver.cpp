@@ -287,7 +287,9 @@ void Liver::processTick()
     SimCtl::time_stamp();
     cout << " Liver::Glycolysis " << glycolysisPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Liver::Release " << releasePerTick  << "mg, gl " << glucose/fluidVolume_ << endl;
+    cout << " Liver::ReleaseMilligrams " << releasePerTick  << endl;
+    SimCtl::time_stamp();
+    cout << " Liver::GlucoseConcentration " << glucose/fluidVolume_ << endl;
 }
 
 void Liver::setParams()

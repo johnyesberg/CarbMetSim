@@ -22,10 +22,10 @@ unsigned SimCtl::ticks=0;
 
 void SimCtl::time_stamp()
 {
-    cout << sim->elapsed_days() << ":" 
+    cout << "\"1970-01-0" << sim->elapsed_days()+1 << "T" 
         << setw(2) << setfill('0') << sim->elapsed_hours() << ":" 
         << setw(2) << setfill('0') << sim->elapsed_minutes() << ":"
-        << "00" // seconds
+        << "00\"" // seconds
 	    << " " << ticks << " ";
 }
 

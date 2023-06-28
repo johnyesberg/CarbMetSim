@@ -41,9 +41,9 @@ void Stomach::processTick()
 	if (stomachEmpty)
 	{
 		SimCtl::time_stamp();
-		cout << " Stomach::Total Food " << totalFood << endl;
+		cout << " Stomach::TotalFood " << totalFood << endl;
 		SimCtl::time_stamp();
-		cout << " Stomach::Calorific Density " << 0 << endl;
+		cout << " Stomach::CalorificDensity " << 0 << endl;
 		SimCtl::time_stamp();
 		cout << " Stomach::geSlope " << 0 << endl;
 		SimCtl::time_stamp();
@@ -90,7 +90,7 @@ void Stomach::processTick()
 	body->intestine->addChyme(ragInBolus, sagInBolus, proteinInBolus, fatInBolus);
 
 	SimCtl::time_stamp();
-	cout << " Stomach::TotalFood " << endl;
+	cout << " Stomach::TotalFood " << totalFood << endl;
 	SimCtl::time_stamp();
 	cout << " Stomach::CalorificDensity " << calorificDensity << endl;
 	SimCtl::time_stamp();

@@ -22,8 +22,11 @@ unsigned SimCtl::ticks=0;
 
 void SimCtl::time_stamp()
 {
-    cout << sim->elapsed_days() << ":" << sim->elapsed_hours() << ":" <<  sim->elapsed_minutes() 
-	<< " " << ticks << " ";
+    cout << sim->elapsed_days() << ":" 
+        << setw(2) << setfill('0') << sim->elapsed_hours() << ":" 
+        << setw(2) << setfill('0') << sim->elapsed_minutes() << ":"
+        << "00" // seconds
+	    << " " << ticks << " ";
 }
 
 bool SimCtl::dayOver()
@@ -81,8 +84,8 @@ int SimCtl::fire_event()
             body->processExerciseEvent(((ExerciseEvent*)event_)->exerciseID_, ((ExerciseEvent*)event_)->duration_);
             break;
         case HALT:
-	    SimCtl::time_stamp();
-    	    cout << " weight " << body->bodyWeight << endl;
+	        //SimCtl::time_stamp();
+    	    //cout << " HumanBody::weight " << body->bodyWeight << endl;
             exit(0);
         default:
             break;

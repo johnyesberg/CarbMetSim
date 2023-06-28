@@ -47,8 +47,8 @@ void Brain::processTick()
         body->blood->branchedAminoAcids = 0;
     }
 
-	//SimCtl::time_stamp();
-	//cout << " Brain:: Oxidation " << oxidationPerTick << endl;
+	SimCtl::time_stamp();
+	cout << " Brain::Oxidation " << oxidationPerTick << endl;
 }
 
 void Brain::setParams()

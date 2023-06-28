@@ -43,7 +43,7 @@ void Heart::processTick()
    ***************/
 
     SimCtl::time_stamp();
-    cout << " Heart:: Oxidation " << oxidationPerTick << endl;
+    cout << " Heart::Oxidation " << oxidationPerTick << endl;
 /*
     double lactateOxidized = (double)(lactateOxidized__(sim->generator))/1000.0;
     if( body->blood->lactate >= lactateOxidized )

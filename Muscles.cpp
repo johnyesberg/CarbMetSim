@@ -85,7 +85,7 @@ void Muscles::processTick()
     double x; // to hold the random samples
     double currEnergyNeed = body->currentEnergyExpenditure();
     // SimCtl::time_stamp();
-    // cout << "HumanBody:: Current Energy Expenditure: " << currEnergyNeed << endl;
+    // cout << "HumanBody::Current Energy Expenditure: " << currEnergyNeed << endl;
 
     if (body->isExercising())
     {
@@ -271,24 +271,24 @@ void Muscles::processTick()
     */
 
     SimCtl::time_stamp();
-    cout << " Muscles:: GlucoseAbsorbed " << glucoseAbsorbedPerTick << endl;
+    cout << " Muscles::GlucoseAbsorbed " << glucoseAbsorbedPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Muscles:: GlycogenSynthesis " << glycogenSynthesizedPerTick << endl;
+    cout << " Muscles::GlycogenSynthesis " << glycogenSynthesizedPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Muscles:: GlycogenBreakdown " << glycogenBreakdownPerTick << endl;
+    cout << " Muscles::GlycogenBreakdown " << glycogenBreakdownPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Muscles:: glycogen " << glycogen / 1000.0 << endl;
+    cout << " Muscles::glycogen " << glycogen / 1000.0 << endl;
     SimCtl::time_stamp();
-    cout << " Muscles:: Oxidation " << oxidationPerTick << endl;
+    cout << " Muscles::Oxidation " << oxidationPerTick << endl;
     // SimCtl::time_stamp();
-    // cout << " Muscles:: GlycogenOxidation " << glycogenOxidizedPerTick << endl;
+    // cout << " Muscles::GlycogenOxidation " << glycogenOxidizedPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Muscles:: Glycolysis " << glycolysisPerTick << endl;
+    cout << " Muscles::Glycolysis " << glycolysisPerTick << endl;
     // SimCtl::time_stamp();
-    // cout << " Muscles:: TotalGlucoseOxidized " << oxidationPerTick + glycogenOxidizedPerTick << endl;
+    // cout << " Muscles::TotalGlucoseOxidized " << oxidationPerTick + glycogenOxidizedPerTick << endl;
     // totalGlucoseAbsorbed += glucoseAbsorbedPerTick;
     // SimCtl::time_stamp();
-    // cout << " Muscles:: totalGlucoseAbsorbed " << totalGlucoseAbsorbed << endl;
+    // cout << " Muscles::totalGlucoseAbsorbed " << totalGlucoseAbsorbed << endl;
 }
 
 Muscles::Muscles(HumanBody *myBody)

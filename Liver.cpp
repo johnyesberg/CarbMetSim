@@ -110,7 +110,7 @@ void Liver::processTick()
 				toGlycogen = maxLipogenesis_ + glycogenMax_ - glycogen;
         			glycogen = glycogenMax_;
     				//SimCtl::time_stamp();
-    				//cout << " Liver:: LipogenesisMax " << maxLipogenesis_ << endl;
+    				//cout << " Liver::LipogenesisMax " << maxLipogenesis_ << endl;
 		}
 		else
 		{
@@ -118,7 +118,7 @@ void Liver::processTick()
         			body->adiposeTissue->lipogenesis(toLipogenesis);
         			glycogen = glycogenMax_;
     				//SimCtl::time_stamp();
-    				//cout << " Liver:: Lipogenesis " << toLipogenesis << endl;
+    				//cout << " Liver::Lipogenesis " << toLipogenesis << endl;
 		}
 	}
     }
@@ -228,10 +228,10 @@ void Liver::processTick()
     	{
     		double maxGNGDuringExercise =  (double)(maxGNGDuringExercise__(sim->generator));
     		//SimCtl::time_stamp();
-		//cout << " Liver:: Glucose Needed " << glucoseNeeded << " maxGNG " << maxGNGDuringExercise << endl; 
+		//cout << " Liver::Glucose Needed " << glucoseNeeded << " maxGNG " << maxGNGDuringExercise << endl; 
     		//maxGNGDuringExercise *= (body->percentVO2Max)*(body->bodyWeight)/1000.0;
     		maxGNGDuringExercise *= (body->bodyWeight)/1000.0;
-		//cout << " Liver:: Glucose Needed " << glucoseNeeded << " maxGNG " << maxGNGDuringExercise << endl; 
+		//cout << " Liver::Glucose Needed " << glucoseNeeded << " maxGNG " << maxGNGDuringExercise << endl; 
    		if( glucoseNeeded > maxGNGDuringExercise - gngPerTick )
 			glucoseNeeded = maxGNGDuringExercise - gngPerTick;
     	}
@@ -241,7 +241,7 @@ void Liver::processTick()
    		glucose += glucoseNeeded;
     		gngPerTick += glucoseNeeded;
     		//SimCtl::time_stamp();
-		//cout << " Liver:: ExtraGNG " << glucoseNeeded << " " << gngPerTick << endl; 
+		//cout << " Liver::ExtraGNG " << glucoseNeeded << " " << gngPerTick << endl; 
    	}
    }
 ****************************************************************************************************************/
@@ -272,22 +272,22 @@ void Liver::processTick()
     }
     
     SimCtl::time_stamp();
-    cout << " Liver:: ToGlycogen " << toGlycogenPerTick << endl;
+    cout << " Liver::ToGlycogen " << toGlycogenPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Liver:: glycogen " << glycogen/1000.0 << endl;
+    cout << " Liver::glycogen " << glycogen/1000.0 << endl;
     SimCtl::time_stamp();
-    cout << " Liver:: FromGlycogen " << fromGlycogenPerTick << endl;
+    cout << " Liver::FromGlycogen " << fromGlycogenPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Liver:: GNG " << gngPerTick << endl;
+    cout << " Liver::GNG " << gngPerTick << endl;
     //SimCtl::time_stamp();
-    //cout << " Liver:: GlucoseProduced " << gngPerTick + fromGlycogenPerTick << endl;
+    //cout << " Liver::GlucoseProduced " << gngPerTick + fromGlycogenPerTick << endl;
 
     SimCtl::time_stamp();
-    cout << " Liver:: Absorption " << absorptionPerTick << endl;
+    cout << " Liver::Absorption " << absorptionPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Liver:: Glycolysis " << glycolysisPerTick << endl;
+    cout << " Liver::Glycolysis " << glycolysisPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Liver:: Release " << releasePerTick  << "mg, gl " << glucose/fluidVolume_ << endl;
+    cout << " Liver::Release " << releasePerTick  << "mg, gl " << glucose/fluidVolume_ << endl;
 }
 
 void Liver::setParams()

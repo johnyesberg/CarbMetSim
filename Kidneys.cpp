@@ -75,18 +75,18 @@ void Kidneys::processTick()
     totalExcretion += excretionPerTick;
 /*
     SimCtl::time_stamp();
-    cout << " Kidneys:: Absorption " << absorptionPerTick << endl;
+    cout << " Kidneys::Absorption " << absorptionPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Kidneys:: Release " << releasePerTick << endl;
+    cout << " Kidneys::Release " << releasePerTick << endl;
 */
     SimCtl::time_stamp();
-    cout << " Kidneys:: Glycolysis " << glycolysisPerTick << endl;
+    cout << " Kidneys::Glycolysis " << glycolysisPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Kidneys:: TotalExcretion " << totalExcretion << endl;
+    cout << " Kidneys::TotalExcretion " << totalExcretion << endl;
     SimCtl::time_stamp();
-    cout << " Kidneys:: GNG " << gngPerTick << endl;
+    cout << " Kidneys::GNG " << gngPerTick << endl;
     SimCtl::time_stamp();
-    cout << " Kidneys:: Excretion " << excretionPerTick << endl;
+    cout << " Kidneys::Excretion " << excretionPerTick << endl;
 }
 
 void Kidneys::setParams()

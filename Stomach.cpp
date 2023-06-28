@@ -41,15 +41,19 @@ void Stomach::processTick()
 	if (stomachEmpty)
 	{
 		SimCtl::time_stamp();
-		cout << " Stomach:: Total Food " << totalFood << endl;
+		cout << " Stomach::Total Food " << totalFood << endl;
 		SimCtl::time_stamp();
-		cout << " Stomach:: Calorific Density " << 0 << endl;
+		cout << " Stomach::Calorific Density " << 0 << endl;
 		SimCtl::time_stamp();
-		cout << " Stomach:: geSlope " << 0 << endl;
+		cout << " Stomach::geSlope " << 0 << endl;
 		SimCtl::time_stamp();
-		cout << " Stomach:: ragInBolus " << 0 << endl;
+		cout << " Stomach::ragInBolus " << 0 << endl;
 		SimCtl::time_stamp();
-		cout << " Stomach:: sagInBolus " << 0 << endl;
+		cout << " Stomach::sagInBolus " << 0 << endl;
+		SimCtl::time_stamp();
+		cout << " Stomach::fatInBolus " << 0 << endl;
+		SimCtl::time_stamp();
+		cout << " Stomach::proteinInBolus " << 0 << endl;
 		return;
 	}
 
@@ -86,22 +90,28 @@ void Stomach::processTick()
 	body->intestine->addChyme(ragInBolus, sagInBolus, proteinInBolus, fatInBolus);
 
 	SimCtl::time_stamp();
-	cout << " Stomach:: Total Food " << endl;
+	cout << " Stomach::TotalFood " << endl;
 	SimCtl::time_stamp();
-	cout << " Stomach:: Calorific Density " << calorificDensity << endl;
+	cout << " Stomach::CalorificDensity " << calorificDensity << endl;
 	SimCtl::time_stamp();
-	cout << " Stomach:: geSlope " << geSlope << endl;
+	cout << " Stomach::geSlope " << geSlope << endl;
 	SimCtl::time_stamp();
-	cout << " Stomach:: ragInBolus " << ragInBolus << endl;
+	cout << " Stomach::ragInBolus " << ragInBolus << endl;
 	SimCtl::time_stamp();
-	cout << " Stomach:: sagInBolus " << sagInBolus << endl;
+	cout << " Stomach::sagInBolus " << sagInBolus << endl;
+	SimCtl::time_stamp();
+	cout << " Stomach::fatInBolus " << fatInBolus << endl;
+	SimCtl::time_stamp();
+	cout << " Stomach::proteinInBolus " << proteinInBolus << endl;
 
 	if ((RAG <= 0.001) && (SAG <= 0.001) && (protein <= 0.001) && (fat <= 0.001))
 	{
 		stomachEmpty = true;
 		body->stomachEmpty();
+/*
 		SimCtl::time_stamp();
 		cout << " Stomach:: SAG " << SAG << " RAG " << RAG << " protein " << protein << " fat " << fat << endl;
+*/
 	}
 }
 

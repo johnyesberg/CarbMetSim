@@ -230,6 +230,7 @@ void HumanBody::resetTotals(bool print)
              << totalGlucoseFromIntestineSoFar << endl;
     }
 
+    totalGlucoseReleaseSoFar = 0; // Is this supposed to be a daily total?
     totalGlycolysisSoFar = 0;
     totalExcretionSoFar = 0;
     totalOxidationSoFar = 0;
@@ -265,7 +266,7 @@ void HumanBody::processTick()
     //SimCtl::time_stamp();
     //cout << " " << currBGL << " " << (liver->glycogen) / 1000.0 << " " << (muscles->glycogen) / 1000.0 << endl;
     SimCtl::time_stamp();
-    cout << " HumanBody:: BGL " << currBGL << endl;
+    cout << " HumanBody::BGL " << currBGL << endl;
     // SimCtl::time_stamp();
     // cout << " weight " << bodyWeight << endl;
 
@@ -273,59 +274,59 @@ void HumanBody::processTick()
     totalGlycolysisSoFar += x;
 
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGlycolysisPerTick " << x << endl;
+    cout << " HumanBody::TotalGlycolysisPerTick " << x << endl;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGlycolysisSoFar " << totalGlycolysisSoFar << endl;
+    cout << " HumanBody::TotalGlycolysisSoFar " << totalGlycolysisSoFar << endl;
 
     x = kidneys->gngPerTick + liver->gngPerTick;
     totalGNGSoFar += x;
 
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGNGPerTick " << x << endl;
+    cout << " HumanBody::TotalGNGPerTick " << x << endl;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGNGSoFar " << totalGNGSoFar << endl;
+    cout << " HumanBody::TotalGNGSoFar " << totalGNGSoFar << endl;
 
     x = brain->oxidationPerTick + heart->oxidationPerTick + muscles->oxidationPerTick;
     totalOxidationSoFar += x;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalOxidationPerTick " << x << endl;
+    cout << " HumanBody::TotalOxidationPerTick " << x << endl;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalOxidationSoFar " << totalOxidationSoFar << endl;
+    cout << " HumanBody::TotalOxidationSoFar " << totalOxidationSoFar << endl;
 
     SimCtl::time_stamp();
-    cout << " HumanBody:: UseOfGlucoseOutsideLiverKidneysMuscles " << blood->glycolysisPerTick + brain->oxidationPerTick + heart->oxidationPerTick + intestine->glycolysisPerTick << endl;
+    cout << " HumanBody::UseOfGlucoseOutsideLiverKidneysMuscles " << blood->glycolysisPerTick + brain->oxidationPerTick + heart->oxidationPerTick + intestine->glycolysisPerTick << endl;
 
     x = liver->toGlycogenPerTick + muscles->glycogenSynthesizedPerTick;
     totalLiverGlycogenStorageSoFar += liver->toGlycogenPerTick;
     totalMusclesGlycogenStorageSoFar += muscles->glycogenSynthesizedPerTick;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGlycogenStoragePerTick " << x << endl;
+    cout << " HumanBody::TotalGlycogenStoragePerTick " << x << endl;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGlycogenStorageSoFar " << totalLiverGlycogenStorageSoFar + totalMusclesGlycogenStorageSoFar
+    cout << " HumanBody::TotalGlycogenStorageSoFar " << totalLiverGlycogenStorageSoFar + totalMusclesGlycogenStorageSoFar
          << endl;
 
     x = liver->fromGlycogenPerTick + muscles->glycogenBreakdownPerTick;
     totalLiverGlycogenBreakdownSoFar += liver->fromGlycogenPerTick;
     totalMusclesGlycogenBreakdownSoFar += muscles->glycogenBreakdownPerTick;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGlycogenBreakdownPerTick " << x << endl;
+    cout << " HumanBody::TotalGlycogenBreakdownPerTick " << x << endl;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGlycogenBreakdownSoFar " << totalLiverGlycogenBreakdownSoFar + totalMusclesGlycogenBreakdownSoFar
+    cout << " HumanBody::TotalGlycogenBreakdownSoFar " << totalLiverGlycogenBreakdownSoFar + totalMusclesGlycogenBreakdownSoFar
          << endl;
 
     x = liver->fromGlycogenPerTick + kidneys->gngPerTick + liver->gngPerTick;
     totalEndogeneousGlucoseReleaseSoFar += x;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalEndogeneousGlucoseReleasePerTick " << x << endl;
+    cout << " HumanBody::TotalEndogeneousGlucoseReleasePerTick " << x << endl;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalEndogeneousGlucoseReleaseSoFar " << totalEndogeneousGlucoseReleaseSoFar << endl;
+    cout << " HumanBody::TotalEndogeneousGlucoseReleaseSoFar " << totalEndogeneousGlucoseReleaseSoFar << endl;
 
     x = intestine->toPortalVeinPerTick + liver->fromGlycogenPerTick + kidneys->gngPerTick + liver->gngPerTick;
     totalGlucoseReleaseSoFar += x;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGlucoseReleasePerTick " << x << endl;
+    cout << " HumanBody::TotalGlucoseReleasePerTick " << x << endl;
     SimCtl::time_stamp();
-    cout << " HumanBody:: TotalGlucoseReleaseSoFar " << totalGlucoseReleaseSoFar << endl;
+    cout << " HumanBody::TotalGlucoseReleaseSoFar " << totalGlucoseReleaseSoFar << endl;
 
     totalExcretionSoFar += kidneys->excretionPerTick;
     totalGlucoseFromIntestineSoFar += intestine->toPortalVeinPerTick;
@@ -376,9 +377,9 @@ void HumanBody::processTick()
         // cout << peakBGL << endl;
     }
 
-    if (SimCtl::ticks == 960)
+/*    if (SimCtl::ticks == 960)
     {
-        cout << "Simulation Results:: GNG " << totalGNGSoFar - tempGNG
+        cout << "Simulation Results::GNG " << totalGNGSoFar - tempGNG
              << " glycolysis " << totalGlycolysisSoFar - tempGlycolysis
              << " oxidation " << totalOxidationSoFar - tempOxidation
              << " excretion " << kidneys->totalExcretion - tempExcretion
@@ -387,6 +388,8 @@ void HumanBody::processTick()
              << " baseBGL " << baseBGL
              << " peakBGL " << peakBGL << endl;
     }
+
+*/
 }
 
 void HumanBody::setParams()

@@ -236,7 +236,7 @@ void Blood::processTick(){
     //SimCtl::time_stamp();
     //cout << " Blood:: totalGlycolysis " << totalGlycolysisSoFar << endl;
     SimCtl::time_stamp();
-    cout << " Blood:: insulinLevel " << insulinLevel << endl;
+    cout << " Blood::insulinLevel " << insulinLevel << endl;
     //" lactate " << lactate << " glutamine " << glutamine << " alanine " << alanine << " gngsubs " << gngSubstrates << " bAA " << branchedAminoAcids << " uAA " <<  unbranchedAminoAcids << endl;
 }
 

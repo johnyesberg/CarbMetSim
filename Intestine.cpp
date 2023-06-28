@@ -77,8 +77,17 @@ void Intestine::processTick()
         totalSAGConsumed += SAGConsumed;
 
         SimCtl::time_stamp();
-        cout << " Chyme[" << chymeNumber <<"]:: RAG " << itr->RAG << " SAG " << itr->SAG << " origRAG " << itr->origRAG
-             << " origSAG " << itr->origSAG << " RAGConsumed " << RAGConsumed << " SAGConsumed " << SAGConsumed << endl;
+        cout << " Chyme[" << chymeNumber <<"]::RAG " << itr->RAG << endl;
+        SimCtl::time_stamp();
+        cout << " Chyme[" << chymeNumber <<"]::SAG " << itr->SAG << endl;
+        SimCtl::time_stamp();
+        cout << " Chyme[" << chymeNumber <<"]::origRAG " << itr->origRAG << endl;
+        SimCtl::time_stamp();
+        cout << " Chyme[" << chymeNumber <<"]::origSAG " << itr->origSAG << endl;
+        SimCtl::time_stamp();
+        cout << " Chyme[" << chymeNumber <<"]::RAGConsumed " << RAGConsumed << endl;
+        SimCtl::time_stamp();
+        cout << " Chyme[" << chymeNumber <<"]::SAGConsumed " << SAGConsumed << endl;
 
         // if( itr->RAG == 0 && itr->SAG == 0 )
         //	itr = chyme.erase(itr);
@@ -95,7 +104,9 @@ void Intestine::processTick()
     totalSAGDigested += totalSAGConsumed;
 
     SimCtl::time_stamp();
-    cout << " Intestine:: RAGConsumed " << totalRAGConsumed << " SAGConsumed " << totalSAGConsumed << endl;
+    cout << " Intestine::RAGConsumed " << totalRAGConsumed << endl;
+    SimCtl::time_stamp();
+    cout << " Intestine::SAGConsumed " << totalSAGConsumed << endl;
     // cout << " Intestine:: RAGConsumed " << totalRAGDigested << " SAGConsumed " << totalSAGDigested << " total " <<
     // totalRAGDigested + totalSAGDigested << endl;
 
@@ -108,7 +119,7 @@ void Intestine::processTick()
             cout << " Intestine:: Glycolysis " << glycolysisPerTick << endl;
     */
     SimCtl::time_stamp();
-    cout << " Intestine:: ToPortalVein " << toPortalVeinPerTick << endl;
+    cout << " Intestine::ToPortalVein " << toPortalVeinPerTick << endl;
 }
 
 void Intestine::setParams()
